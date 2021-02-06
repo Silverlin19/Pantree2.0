@@ -27,29 +27,28 @@
   
   <div >
     <div class="translucent-form-overlay">
-        <form >
-          <h3>What's in my fridge?</h3>
+      <form id="input-form">
+        <h3>What's in my fridge?</h3>
           <div class="row columns">
             <label>
               <input type="text" name="keyword" placeholder="Enter ingredients here:">
             </label>
-            <button id="Lbutton"  type="button" class="primary button  search-button">
+            <button id="Lbutton"  type="submit" class="primary button  search-button">
               Add to fridge
+            </button>
           </div>
           <div class="form-group row columns">
-                <h2> In my fridge:</h2>
-                <div class="inside"></div>
-                   <ul id="in-fridge"></ul>
-                </div>
+            <h2> In my fridge:</h2>
+              <div class="inside">
+                <ul id="in-fridge"></ul>
               </div>
-         
-        <section class="btn_layout">
-          <button id="Rbutton" type="button" class="success button  search-button">
+          </div>
+         <section class="btn_layout">
+            <button id="Rbutton" type="submit" class="success button  search-button">
             Lets get cooking!
-          </button>
-        </section>
-       </form>
-      </div>
+            </button>
+          </section>
+      </form>
     </div>
 
     <!--Hidden Results box  -->
@@ -76,7 +75,7 @@
     <footer id="footer" class="subnav-hero-section"> Brought to you with much love by Team #1 &hearts; </footer>
     </div>
 
-    <script src="./assets/script.js" ></script>
+    <script src="assets/script.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
 
 </body>

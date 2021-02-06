@@ -129,7 +129,7 @@ body {
 }
 
 .translucent-form-overlay input:-ms-input-placeholder {
-  color: #8a8a8a;
+  color: black;
 }
 
 .translucent-form-overlay input::placeholder {
@@ -219,7 +219,8 @@ body {
 }
 
 .inside {
-  background-color: white;
+  background-color: whitesmoke;
+  color: black;
   height: 150px;
 }
 
