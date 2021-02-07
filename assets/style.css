@@ -251,3 +251,28 @@ body {
 #drinks {
   background-color: rgba(54, 54, 54, 0.8) !important;
 }
+
+#cont-recipe{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.recipe{
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgb(69,69,69);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: white;
+  align-items: center;
+  min-width: 420px;
+  min-height: 420px;
+  max-width: 420px;
+  max-height: 420px;
+}
+.title{
+  font-weight: bold;
+  font-size: large;
+}
