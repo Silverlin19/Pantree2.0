@@ -94,15 +94,13 @@ formEl.addEventListener("submit", (e)=>{
                 contRecipe.innerHTML += `
                 <a href=${item.recipe.url} target="_blank" rel="noreferrer noopener" >
                 <div class='recipe'>
-                <h1>${item.recipe.label}</h1>
+                <div class='title'>${item.recipe.label}</div>
                 <li></li>
                 <img src=${item.recipe.image} alt=""/>
                 </div></a>
                 `
                 console.log(item.recipe.label)
             })
-            
-            
         },
         //if unsuccessful it returns an error to console
         error:function(error){

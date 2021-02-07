@@ -267,5 +267,12 @@ body {
   justify-content: space-around;
   background: white;
   align-items: center;
-  min-width: 30%;
+  min-width: 420px;
+  min-height: 420px;
+  max-width: 420px;
+  max-height: 420px;
+}
+.title{
+  font-weight: bold;
+  font-size: large;
 }
