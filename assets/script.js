@@ -35,6 +35,7 @@ var addToFridge = function(event) {
    
     listItemEl.setAttribute("data-food-id", foodIdCounter);
 
+<<<<<<< Updated upstream
     var foodInfoEl = document.createElement("div");
     foodInfoEl.className = "food-info";
     foodInfoEl.innerHTML = "<li class='food-item'>" + foodDataObj.name + "</li><span class='task-type'>" + "</span>";
@@ -54,11 +55,31 @@ var createDelete = function(foodId) {
 >>>>>>> Stashed changes
 
     
-
+=======
 };
 
 formEl.addEventListener("submit", addToFridge);
 
+// search recipe
+>>>>>>> Stashed changes
+
+var searchEl = document.querySelector("#add1")
+
+var recipe = function() {
+
+    const APP_ID = "4c0248f7"
+    const APP_KEY = "82163b1aa0397f62b7d3cbcd21c9579b"
+
+    const async () => {
+        const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`)
+        const data = await response.json()
+        setRecipes(data.hits)
+        console.log(data)
+      }
+
+}
+
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
 
@@ -99,4 +120,7 @@ searchEl.addEventListener("submit", (e)=>{
     })
 
 })
+>>>>>>> Stashed changes
+=======
+searchEl.addEventListener("submit", recipe)
 >>>>>>> Stashed changes
