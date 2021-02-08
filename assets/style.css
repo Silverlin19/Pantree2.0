@@ -252,27 +252,40 @@ body {
   background-color: rgba(54, 54, 54, 0.8) !important;
 }
 
-#cont-recipe{
+#cont-recipe {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.recipe{
-  border-radius: 10px;
-  box-shadow: 0px 5px 20px rgb(69,69,69);
+.recipe {
+  border-radius: 25px 100px 25px;
+  box-shadow: 0px 5px 20px rgb(69, 69, 69);
   margin: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background: white;
+  background: rgba(245, 245, 245, 0.9);
   align-items: center;
   min-width: 420px;
   min-height: 420px;
   max-width: 420px;
   max-height: 420px;
 }
-.title{
+
+img {
+  border-radius: 50%;
+}
+
+.title {
   font-weight: bold;
   font-size: large;
+  font-family: "Courier New", Courier, monospace !important;
+  font-size: 160%;
+  color: black;
+  background-color: rgba(245, 245, 245, 0.1);
+}
+
+#cont-recipe li {
+  list-style-type: none;
 }
