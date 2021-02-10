@@ -25,6 +25,22 @@ var addToFridge = function(event) {
     
 };
 
+var createDelete = function(foodIdCounter) {
+    var deleteContainerEl = document.createElement("div");
+    deleteContainerEl.className = "delete-action";
+
+    // create delete button
+var deleteButtonEl = document.createElement("button");
+deleteButtonEl.textContent = "Delete";
+deleteButtonEl.className = "success button  search-button";
+deleteButtonEl.setAttribute("data-food-id", foodIdCounter);
+
+deleteContainerEl.appendChild(deleteButtonEl);
+
+return deleteContainerEl;
+
+};
+
 var createItemEl = function(foodDataObj) {
 
     var listItemEl = document.createElement("li");
@@ -39,31 +55,18 @@ var createItemEl = function(foodDataObj) {
   
     console.dir(listItemEl);
 
+    var deleteButtonEl = createDelete(foodIdCounter);
+    console.log(deleteButtonEl);
+
+    listItemEl.appendChild(deleteButtonEl);
     inFridgeEl.appendChild(listItemEl);
   
     // increase task counter for next unique id
     foodIdCounter++;
   };
+  
+  formEl.addEventListener("submit", addToFridge)
 
-var createDelete = function(foodId) {
-    var actionContainerEl = document.createElement("div");
-    actionContainerEl.className = "task-actions";
-
-    // create delete button
-var deleteButtonEl = document.createElement("button");
-deleteButtonEl.textContent = "Delete";
-deleteButtonEl.className = "btn delete-btn";
-deleteButtonEl.setAttribute("data-food-id", foodId);
-
-actionContainerEl.appendChild(deleteButtonEl);
-
-
-
-};
-
-
-
-formEl.addEventListener("submit", addToFridge)
 
 var searchEl = document.querySelector("#Rbutton");
 
@@ -71,7 +74,7 @@ const contRecipe = document.getElementById("cont-recipe")
 
 
 //searches for recipe 
-formEl.addEventListener("submit", (e)=>{
+formEl.addEventListener("submit", (e) => {
 
     const APP_ID = "4c0248f7"
     const APP_KEY = "82163b1aa0397f62b7d3cbcd21c9579b"
