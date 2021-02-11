@@ -1,9 +1,3 @@
-// function show() {
-//     var element = document.getElementById("left");
-//     element.classList.remove("hidden");
-//   }
-
-
 var foodIdCounter = 0;
 var formEl = document.querySelector("#input-form");
 var inFridgeEl = document.querySelector("#in-fridge");
@@ -25,45 +19,52 @@ var addToFridge = function(event) {
     
 };
 
+var createDeleteContainerEl = function(foodIdCounter) {
+    var deleteContainerEl = document.createElement("div");
+    deleteContainerEl.className = "delete-action";
+
+    // create delete button
+    var deleteButtonEl = document.createElement("button");
+    deleteButtonEl.textContent = "Delete";
+    deleteButtonEl.className = "primary button  search-button";
+    deleteButtonEl.setAttribute("data-food-id", "foodIdCounter");
+
+    deleteContainerEl.appendChild(deleteButtonEl);
+    
+    return deleteContainerEl;
+
+};
+
+
 var createItemEl = function(foodDataObj) {
 
     var listItemEl = document.createElement("li");
     listItemEl.className = "food-item";
    
-    listItemEl.setAttribute("data-food-id", foodIdCounter);
+    listItemEl.setAttribute("data-food-id", "foodIdCounter");
 
     var foodInfoEl = document.createElement("div");
     foodInfoEl.className = "food-info";
-    foodInfoEl.innerHTML = "<li class='food-item'><button id='query'>" + foodDataObj.name + "</button></li><span class='task-type'></span>";
+    foodInfoEl.innerHTML = "<li class='food-item'>" + foodDataObj.name + "</li><span class='task-type'>" + "</span>";
     listItemEl.appendChild(foodInfoEl);
   
     console.dir(listItemEl);
 
+    var deleteButtonEl = createDeleteContainerEl(foodIdCounter);
+
+    listItemEl.appendChild(deleteButtonEl);    
     inFridgeEl.appendChild(listItemEl);
   
     // increase task counter for next unique id
     foodIdCounter++;
-  };
-
-var createDelete = function(foodId) {
-    var actionContainerEl = document.createElement("div");
-    actionContainerEl.className = "task-actions";
-
-    // create delete button
-var deleteButtonEl = document.createElement("button");
-deleteButtonEl.textContent = "Delete";
-deleteButtonEl.className = "btn delete-btn";
-deleteButtonEl.setAttribute("data-food-id", foodId);
-
-actionContainerEl.appendChild(deleteButtonEl);
-
-
-
 };
 
 
 
-formEl.addEventListener("submit", addToFridge)
+
+formEl.addEventListener("submit", addToFridge);
+
+
 
 var searchEl = document.querySelector("#Rbutton");
 
