@@ -7,6 +7,7 @@
 var foodIdCounter = 0;
 var drinkEl = document.querySelector("#drink-form");
 var inFridgeEl = document.querySelector("#in-fridge");
+var query = "lemon"
 // Adding to Fridge!
 var addToFridge = function(event) {
 
@@ -61,7 +62,7 @@ actionContainerEl.appendChild(deleteButtonEl);
 
 };
 
-
+var query = "lemon"
 
 drinkEl.addEventListener("submit", addToFridge)
 
@@ -73,10 +74,9 @@ drinkEl.addEventListener("submit", (e)=>{
 
     const APP_ID = "4c0248f7"
     const APP_KEY = "82163b1aa0397f62b7d3cbcd21c9579b"
-    var query = "lemon"
     e.preventDefault()
     const app_url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${query}`
-    contRecipe.innerHTML = ''
+    contDrink.innerHTML = ''
 
 
     //Calls to api 
@@ -89,10 +89,9 @@ drinkEl.addEventListener("submit", (e)=>{
             allRecipe.map((item)=>{
 
                 contDrink.innerHTML += `
-                <a href=${item} target="_blank" rel="noreferrer noopener" >
+                <a href='''' target="_blank" rel="noreferrer noopener" >
                 <div class='drink'>
                 <div class='title'>${item.strDrink}</div>
-                <li></li>
                 <img src=${item.strDrinkThumb} alt=""/>
                 </div></a>
                 `
