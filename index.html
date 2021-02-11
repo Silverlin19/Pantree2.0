@@ -6,6 +6,7 @@
     <title>Pantree</title>    
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="./assets/images/pantree.png">
 
 
 
@@ -18,8 +19,9 @@
     <!-- <h1 class="subnav-hero-headline"> Pantree<sub><small>.com</small></sub></h1> -->
     <ul class="subnav-hero-subnav">
       <li><a href="./drinks.html">Let's get drinking!</a></li>
-      <li><a href="./About_us.html" class="is-active">Let's get cooking!</a></li>
       <li><a href="./About_us.html">About us</a></li>
+      <li><a href="./index.html" class="is-active">Let's get cooking!</a></li>
+     
     </ul>
   </header>
 
@@ -33,7 +35,7 @@
             <label>
               <input type="text" name="keyword" placeholder="Enter ingredients here:">
             </label>
-            <button id="Lbutton"  type="submit" class="primary button  search-button">
+            <button id="add1"  type="submit" class="primary button  search-button">
               Add to fridge
             </button>
            
@@ -48,26 +50,19 @@
               </div>
     
           </div>
-         <section class="btn_layout">
-            <button id="Rbutton" type="submit" class="success button  search-button">
+          <br>
+          <button id="Rbutton" type="submit" class="success button  search-button">
             Lets get cooking!
             </button>
-          </section>
-      </form>
+        </form>
+        
+      
     </div>
 
     <!--Hidden Results box  -->
- 
-    <div id="wrap">
-    <div id="left" class=" hidden translucent-form-overlay">
-          
-          </div>
-    <div id="right" class=" hidden translucent-form-overlay">
+    <div id="cont-recipe">
 
-        <ul>
-            </ul>        
-          </div>
-        </div>
+    </div>
           <!-- end results -->
  
 
@@ -82,6 +77,8 @@
 
     <script src="assets/script.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
 </body>
 </html>
