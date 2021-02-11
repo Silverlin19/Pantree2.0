@@ -166,9 +166,11 @@ body {
   max-width: 100%;
   text-align: center;
   font-family: "Courier New", Courier, monospace !important;
-  width: 100%;
+  width: 80%;
   margin: 0 auto 30px auto;
   overflow: auto;
+  justify-content:center;
+  height: 50%;
 }
 .title {
   font-weight: bolder;
@@ -178,12 +180,14 @@ body {
 /*had to change the width from 900 px to 100% to match the other pages*/
 .team {
   max-width: 100%;
-  width: 100%;
+  width: 80%;
   margin: 0 auto 30px auto;
   background-color: rgba(54, 54, 54, 0.8);
   color: #fefefe;
   overflow: auto;
   border-radius: 100px;
+  justify-content:center;
+  height: 50%;
 }
 .t {
   color: #fefefe;
@@ -308,7 +312,6 @@ body {
 /*adjusted logo for smaller devices*/
 @media screen and (max-width: 1366px) {
   .logo{
-    width: 350px;
     padding: 30px;
     height:200px;
   }
@@ -320,7 +323,7 @@ body {
 }
 @media screen and (max-width: 1025) {
   .logo{
-    width: 100px;
+    width: 100;
     padding: 30px;
     height: 200px;
   }
@@ -337,9 +340,8 @@ body {
 /*ajusted nave bar for devices of this size*/
 @media screen and (max-width: 655px){
   .logo{
-    width:75%;
     padding:35px;
-    height:80%;
+    height:100%;
   }
   .subnav-hero-subnav{
     width: 100%;
