@@ -5,7 +5,8 @@
 
 
 var foodIdCounter = 0;
-var drinkEl = document.querySelector("#drink-form");
+var drinkEl = document.querySelector("#add1");
+var queryEl = document.querySelector("#Rbutton");
 var inFridgeEl = document.querySelector("#in-fridge");
 var query = "lemon"
 // Adding to Fridge!
@@ -68,9 +69,9 @@ drinkEl.addEventListener("submit", addToFridge)
 
 const contDrink = document.getElementById("cont-drink")
 
-var drinkEl = document.querySelector("#drink-form");
+
 //searches for liquor recipe 
-drinkEl.addEventListener("submit", (e)=>{
+queryEl.addEventListener("click", (e)=>{
 
     const APP_ID = "4c0248f7"
     const APP_KEY = "82163b1aa0397f62b7d3cbcd21c9579b"
@@ -95,11 +96,10 @@ drinkEl.addEventListener("submit", (e)=>{
                 <img src=${item.strDrinkThumb} alt=""/>
                 </div></a>
                 `
-                
             })
 
             console.log(data.drinks)
-            
+
         },
         //if unsuccessful it returns an error to console
         error:function(error){
