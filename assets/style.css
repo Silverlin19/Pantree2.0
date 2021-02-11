@@ -275,4 +275,82 @@ body {
 .title{
   font-weight: bold;
   font-size: large;
+<<<<<<< Updated upstream
 }
+=======
+}
+
+.translucent-form-overlay-2 {
+  max-width: 500px;
+  width: 100%;
+  background-color: rgba(126, 124, 124, 0.9);
+  padding: 20px;
+  color: #fefefe;
+  justify-items: center;
+  align-items: center;
+  margin: 50px auto;
+  height: 100%;
+}
+#cont-drink {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.drink {
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgb(69, 69, 69);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: white;
+  align-items: center;
+  min-width: 420px;
+  min-height: 420px;
+  max-width: 420px;
+  max-height: 420px;
+}
+
+/*adjusted logo for smaller devices*/
+@media screen and (max-width: 1366px) {
+  .logo {
+    width: 350px;
+    padding: 30px;
+    height: 200px;
+  }
+  .translucent-form-overlay {
+    height: 100%;
+    width: 100%;
+    padding: 60px;
+  }
+}
+@media screen and (max-width: 1025) {
+  .logo {
+    width: 100px;
+    padding: 30px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .logo {
+    width: 75%;
+    padding: 45px;
+    height: 100%;
+  }
+}
+
+/*ajusted nave bar for devices of this size*/
+@media screen and (max-width: 655px) {
+  .logo {
+    width: 75%;
+    padding: 35px;
+    height: 80%;
+  }
+  .subnav-hero-subnav {
+    width: 100%;
+    margin: -13px;
+  }
+}
+>>>>>>> Stashed changes
