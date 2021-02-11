@@ -315,7 +315,6 @@ body {
 /*adjusted logo for smaller devices*/
 @media screen and (max-width: 1366px) {
   .logo {
-    width: 350px;
     padding: 30px;
     height: 200px;
   }
@@ -335,7 +334,6 @@ body {
 
 @media screen and (max-width: 820px) {
   .logo {
-    width: 75%;
     padding: 45px;
     height: 100%;
   }
@@ -344,9 +342,8 @@ body {
 /*ajusted nave bar for devices of this size*/
 @media screen and (max-width: 655px) {
   .logo {
-    width: 75%;
     padding: 35px;
-    height: 80%;
+    height: 100%;
   }
   .subnav-hero-subnav {
     width: 100%;
