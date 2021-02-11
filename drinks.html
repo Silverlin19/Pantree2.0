@@ -6,6 +6,7 @@
     <title>Pantree Drinks</title>    
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="./assets/images/pantree.png">
 
 
 
@@ -27,24 +28,25 @@
   
   <div >
     <div id="drinks" class="translucent-form-overlay">
-        <form >
+        <form id="input-form">
           <h3>What's in the bar?</h3>
           <div class="row columns">
             <label>
               <input type="text" name="keyword" placeholder="Enter ingredients here:">
             </label>
-            <button id="Lbutton"  type="button" class="primary button  search-button">
+            <button id="add1"  type="submit" class="cellar-btn button  search-button">
               Add to cellar
           </div>
           <div class="form-group row columns">
                 <h2> In my cellar:</h2>
-                <div class="inside"></div>
+                <div class="inside">
                    <ul id="in-fridge"></ul>
                 </div>
               </div>
          
         <section class="btn_layout">
-          <button id="Rbutton"  type="button" class="success button  search-button">
+          <br>
+          <button id="Rbutton"  type="submit" class="drink-btn  button  search-button">
             Lets get drinking!
           </button>
         </section>
@@ -76,7 +78,7 @@
     <footer id="footer" class="subnav-hero-section"> Brought to you with much love by Team #1 &hearts; </footer>
     </div>
 
-    <script src="./assets/js/script.js" ></script>
+    <script src="./assets/script.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
 
 </body>
