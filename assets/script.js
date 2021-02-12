@@ -1,33 +1,38 @@
 var foodIdCounter = 0;
 var formEl = document.querySelector("#input-form");
+var addToFridgeBtn = document.querySelector("#add1");
 var inFridgeEl = document.querySelector("#in-fridge");
+var insideEl = document.querySelector('#inside');
 // Adding to Fridge!
 var addToFridge = function(event) {
 
     event.preventDefault();
 
     var newFoodInput = document.querySelector("input[name='keyword']").value;
+    newFoodInput = newFoodInput.trim();
+    if (newFoodInput.length > 0) {
 
-    formEl.reset();
+        formEl.reset();
 
-    var foodDataObj = {
-        name: newFoodInput,
-    };
-
-    //this will make the item added to the list into a data object
-    createItemEl(foodDataObj);
+        var foodDataObj = {
+            name: newFoodInput,
+        };
     
+        //this will make the item added to the list into a data object
+        createItemEl(foodDataObj);
+    }
+   
 };
 
-var createDeleteContainerEl = function(foodIdCounter) {
+var createDeleteContainerEl = function() {
     var deleteContainerEl = document.createElement("div");
     deleteContainerEl.className = "delete-action";
 
     // create delete button
     var deleteButtonEl = document.createElement("button");
     deleteButtonEl.textContent = "Delete";
-    deleteButtonEl.className = "primary button  search-button";
-    deleteButtonEl.setAttribute("data-food-id", "foodIdCounter");
+    deleteButtonEl.className = "delete-Btn";
+    deleteButtonEl.setAttribute("data-food-id", foodIdCounter);
 
     deleteContainerEl.appendChild(deleteButtonEl);
     
@@ -35,37 +40,54 @@ var createDeleteContainerEl = function(foodIdCounter) {
 
 };
 
-
 var createItemEl = function(foodDataObj) {
 
     var listItemEl = document.createElement("li");
     listItemEl.className = "food-item";
    
-    listItemEl.setAttribute("data-food-id", "foodIdCounter");
+    listItemEl.setAttribute("data-food-id", foodIdCounter);
 
     var foodInfoEl = document.createElement("div");
-    foodInfoEl.className = "food-info";
-    foodInfoEl.innerHTML = "<li class='food-item'>" + foodDataObj.name + "</li><span class='task-type'>" + "</span>";
-    listItemEl.appendChild(foodInfoEl);
+    foodInfoEl.innerHTML = "<li class='food-item'>" + foodDataObj.name + "</li>" ;
+    foodInfoEl.setAttribute("data-food-id", foodIdCounter);
+    //listItemEl.appendChild(foodInfoEl);
   
     console.dir(listItemEl);
 
-    var deleteButtonEl = createDeleteContainerEl(foodIdCounter);
+    var deleteButtonEl = createDeleteContainerEl();
 
-    listItemEl.appendChild(deleteButtonEl);    
-    inFridgeEl.appendChild(listItemEl);
+    foodInfoEl.appendChild(deleteButtonEl);    
+    inFridgeEl.appendChild(foodInfoEl);
   
     // increase task counter for next unique id
     foodIdCounter++;
 };
 
+addToFridgeBtn.addEventListener("click", addToFridge);
+
+//havent quite finished this part yet so stuff isnt deleting yet
+var deleteFood = function() {
+
+};
+
+var deleteButtonHandler = function(event) {
+    console.log("delete button", event.target);
+    console.log("parent", event.target.parentElement);
+
+    if (event.target.matches(".delete-Btn")) {
+        var foodId = event.target.getAttribute("delete-action", event.target.parentElement);
+        deleteFood(foodId);
+
+    };
+
+};
+
+insideEl.addEventListener("click", deleteButtonHandler);
 
 
 
-formEl.addEventListener("submit", addToFridge);
 
-
-
+//below is the JS for fetching from API
 var searchEl = document.querySelector("#Rbutton");
 
 const contRecipe = document.getElementById("cont-recipe")
