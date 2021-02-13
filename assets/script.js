@@ -33,7 +33,7 @@ var createDeleteContainerEl = function() {
     deleteButtonEl.textContent = "Delete";
     deleteButtonEl.className = "delete-Btn";
     deleteButtonEl.setAttribute("data-food-id", foodIdCounter);
-
+    deleteButtonEl.setAttribute("type", "button");
     deleteContainerEl.appendChild(deleteButtonEl);
     
     return deleteContainerEl;
@@ -56,7 +56,8 @@ var createItemEl = function(foodDataObj) {
 
     var deleteButtonEl = createDeleteContainerEl();
 
-    foodInfoEl.appendChild(deleteButtonEl);    
+    foodInfoEl.appendChild(deleteButtonEl);
+
     inFridgeEl.appendChild(foodInfoEl);
   
     // increase task counter for next unique id
@@ -66,17 +67,21 @@ var createItemEl = function(foodDataObj) {
 addToFridgeBtn.addEventListener("click", addToFridge);
 
 //havent quite finished this part yet so stuff isnt deleting yet
-var deleteFood = function() {
+var deleteFood = function(foodId) {
+    console.log(foodId);
 
-};
+}
 
 var deleteButtonHandler = function(event) {
+    event.preventDefault()
     console.log("delete button", event.target);
     console.log("parent", event.target.parentElement);
 
     if (event.target.matches(".delete-Btn")) {
-        var foodId = event.target.getAttribute("delete-action", event.target.parentElement);
-        deleteFood(foodId);
+        var foodId = event.target.parentNode;
+        var foodId2 = foodId.parentNode;
+        foodId2.remove();
+
 
     };
 
