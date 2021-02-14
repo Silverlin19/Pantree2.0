@@ -30,7 +30,7 @@ var createDeleteContainerEl = function() {
 
     // create delete button
     var deleteButtonEl = document.createElement("button");
-    deleteButtonEl.textContent = "Delete";
+    deleteButtonEl.textContent = "Expired";
     deleteButtonEl.className = "delete-Btn";
     deleteButtonEl.setAttribute("data-food-id", foodIdCounter);
     deleteButtonEl.setAttribute("type", "button");

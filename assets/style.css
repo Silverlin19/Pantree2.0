@@ -162,7 +162,17 @@ body {
   margin-left: 20px;
 }
 .delete-Btn {
-  
+  padding: 05px 10px;
+  font-size: 12px;
+  background-color: grey;
+  font-style: italic;
+  border: 2px solid black;
+  color: white;
+}
+
+.food-item {
+  font-weight: bold;
+  font-size: 19px;
 }
 /*had to adjust width and make it a percent*/
 .teams {
