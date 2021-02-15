@@ -22,6 +22,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+img {
+  max-width: 75% !important;
+}
 .body-image {
   background-size: cover;
   display: flex;
@@ -270,6 +273,30 @@ body {
   background-color: rgba(54, 54, 54, 0.9) !important;
 }
 
+.drink img {
+  border-radius: 100%;
+}
+
+.drink {
+  border-radius: 30%;
+  box-shadow: 0px 5px 20px rgb(69, 69, 69);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgba(54, 54, 54, 0.85);
+  align-items: center;
+  min-width: 420px;
+  min-height: 420px;
+  max-width: 420px;
+  max-height: 420px;
+}
+#cont-drink {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 #drinks {
   background-color: rgba(54, 54, 54, 0.8) !important;
 }
@@ -307,6 +334,12 @@ body {
 .title {
   font-weight: bold;
   font-size: large;
+  text-decoration-color: inherit;
+  background: none;
+}
+
+.drink-name {
+  color: antiquewhite;
 }
 
 .translucent-form-overlay-2 {

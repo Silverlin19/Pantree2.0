@@ -27,46 +27,37 @@
   <!-- Entry Box  -->
   
   <div >
-    <div id="drinks" class="translucent-form-overlay">
-        <form id="input-form">
-          <h3>What's in the bar?</h3>
+    <div  id="drinks" class="translucent-form-overlay">
+      <form id="drink-form">
+        <h3>What's in the bar?</h3>
           <div class="row columns">
             <label>
               <input type="text" name="keyword" placeholder="Enter ingredients here:">
             </label>
             <button id="add1"  type="submit" class="cellar-btn button  search-button">
               Add to cellar
+            </button>
           </div>
           <div class="form-group row columns">
-                <h2> In my cellar:</h2>
-                <div class="inside">
-                   <ul id="in-fridge"></ul>
-                </div>
+            <h2> In my cellar:</h2>
+              <div class="inside">
+                <ul id="in-fridge"></ul>
               </div>
-         
-        <section class="btn_layout">
-          <br>
-          <button id="Rbutton"  type="submit" class="drink-btn  button  search-button">
+          </div>
+          
+        </form>
+        <br>
+        <button id="Rbutton" type="click" class="drink-btn button  search-button">
             Lets get drinking!
-          </button>
-        </section>
-       </form>
-      </div>
+            </button>
+      
     </div>
 
-    <!--Hidden Results box  -->
- 
-    <div id="wrap">
-    <div id="left" class=" hidden translucent-form-overlay">
-          
-          </div>
-    <div id="right" class=" hidden translucent-form-overlay">
+  <!--Hidden Results box  -->
+  <div id="cont-drink">
 
-        <ul>
-            </ul>        
-          </div>
-        </div>
-          <!-- end results -->
+  </div>
+        <!-- end results -->
  
 
           
@@ -78,8 +69,9 @@
     <footer id="footer" class="subnav-hero-section"> Brought to you with much love by Team #1 &hearts; </footer>
     </div>
 
-    <script src="./assets/script.js" ></script>
+    <script src="./assets/drinks.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </body>
 </html>

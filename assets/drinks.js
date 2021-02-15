@@ -5,8 +5,10 @@
 
 
 var foodIdCounter = 0;
-var formEl = document.querySelector("#input-form");
+var drinkEl = document.querySelector("#add1");
+var queryEl = document.querySelector("#Rbutton");
 var inFridgeEl = document.querySelector("#in-fridge");
+var query = "lemon"
 // Adding to Fridge!
 var addToFridge = function(event) {
 
@@ -14,7 +16,7 @@ var addToFridge = function(event) {
 
     var newFoodInput = document.querySelector("input[name='keyword']").value;
 
-    formEl.reset();
+    drinkEl.reset();
 
     var foodDataObj = {
         name: newFoodInput,
@@ -61,25 +63,21 @@ actionContainerEl.appendChild(deleteButtonEl);
 
 };
 
+var query = "lemon"
+
+drinkEl.addEventListener("submit", addToFridge)
+
+const contDrink = document.getElementById("cont-drink")
 
 
-formEl.addEventListener("submit", addToFridge)
-
-var searchEl = document.querySelector("#Rbutton");
-
-const contRecipe = document.getElementById("cont-recipe")
-
-
-//searches for recipe 
-formEl.addEventListener("submit", (e)=>{
+//searches for liquor recipe 
+queryEl.addEventListener("click", (e)=>{
 
     const APP_ID = "4c0248f7"
     const APP_KEY = "82163b1aa0397f62b7d3cbcd21c9579b"
-
     e.preventDefault()
-    let query = ("chicken")
-    const app_url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
-    contRecipe.innerHTML = ''
+    const app_url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${query}`
+    contDrink.innerHTML = ''
 
 
     //Calls to api 
@@ -88,19 +86,20 @@ formEl.addEventListener("submit", (e)=>{
         url: app_url,
         //if successful it returns a new div of the recipe
         success:function(data){
-            const allRecipe = data.hits
+            const allRecipe = data.drinks
             allRecipe.map((item)=>{
 
-                contRecipe.innerHTML += `
-                <a href=${item.recipe.url} target="_blank" rel="noreferrer noopener" >
-                <div class='recipe'>
-                <div class='title'>${item.recipe.label}</div>
-                
-                <img src=${item.recipe.image} alt=""/>
+                contDrink.innerHTML += `
+                <a href='''' target="_blank" rel="noreferrer noopener" >
+                <div class='drink'>
+                <div class='drink-name title'>${item.strDrink}</div>
+                <img src=${item.strDrinkThumb} alt=""/>
                 </div></a>
                 `
-                console.log(data)
             })
+
+            console.log(data.drinks)
+
         },
         //if unsuccessful it returns an error to console
         error:function(error){
@@ -109,6 +108,3 @@ formEl.addEventListener("submit", (e)=>{
     })
 
 })
-
-
-
