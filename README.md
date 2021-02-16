@@ -16,10 +16,9 @@ LINK: https://silverlin19.github.io/Pantree2.0/index.html
 
 <br/>
 
-| Problem      | Our Solution |
-| ------------ | ------------ |
-| Content Cell | Content Cell |
-| Content Cell | Content Cell |
+| Problem           | Our Solution                            |
+| ----------------- | --------------------------------------- |
+| Limited resources | Comprehensive search of a vast database |
 
 <br/>
 
@@ -31,9 +30,9 @@ LINK: https://silverlin19.github.io/Pantree2.0/index.html
 
 ## _ScreenShotss_
 
-![GitHub Logo](./images/)
+![GitHub Logo](./images/Web-screenshots/1)
 <br/>
-![GitHub Logo](/images/logo.png)
+![GitHub Logo](./images/Web-screenshots/2)
 <br/>
-![GitHub Logo](/images/logo.png)
+![GitHub Logo](./images/Web-screenshots/3)
 <br/>
