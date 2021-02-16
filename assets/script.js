@@ -94,7 +94,7 @@ formEl.addEventListener("submit", (e)=>{
                 contRecipe.innerHTML += `
                 <a href=${item.recipe.url} target="_blank" rel="noreferrer noopener" >
                 <div class='recipe'>
-                <div class='title'>${item.recipe.label}</div>
+                <div class='title-2 title'>${item.recipe.label}</div>
                 
                 <img src=${item.recipe.image} alt=""/>
                 </div></a>

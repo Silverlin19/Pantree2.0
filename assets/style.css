@@ -25,24 +25,14 @@ body {
 img {
   max-width: 75% !important;
 }
-.body-image {
+#body-image {
+  background-image: url(./images/AU_Image.jpg);
   background-size: cover;
-  display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  align-items: flex-start;
   background-attachment: fixed;
   background-position: 100%;
-  max-width: 1800px;
   width: 100%;
 }
-
-/* #body-image {
-
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-
-} */
 
 .subnav-hero-section {
   text-align: center;
