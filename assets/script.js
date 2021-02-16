@@ -3,6 +3,7 @@ var formEl = document.querySelector("#input-form");
 var addToFridgeBtn = document.querySelector("#add1");
 var inFridgeEl = document.querySelector("#in-fridge");
 var insideEl = document.querySelector('#inside');
+var foodLocalStorage = [];
 // Adding to Fridge!
 var addToFridge = function(event) {
 
@@ -16,6 +17,7 @@ var addToFridge = function(event) {
 
         var foodDataObj = {
             name: newFoodInput,
+            status: "in fridge"
         };
     
         //this will make the item added to the list into a data object
@@ -59,9 +61,15 @@ var createItemEl = function(foodDataObj) {
     foodInfoEl.appendChild(deleteButtonEl);
 
     inFridgeEl.appendChild(foodInfoEl);
+    foodDataObj.id = foodIdCounter;
+    foodLocalStorage.push(foodDataObj);
   
     // increase task counter for next unique id
     foodIdCounter++;
+};
+
+var saveToLocalStorage = function() {
+   localStorage.setItem("food", newFoodInput, JSON.stringify(food)); 
 };
 
 addToFridgeBtn.addEventListener("click", addToFridge);
@@ -70,7 +78,7 @@ addToFridgeBtn.addEventListener("click", addToFridge);
 var deleteFood = function(foodId) {
     console.log(foodId);
 
-}
+};
 
 var deleteButtonHandler = function(event) {
     event.preventDefault()
