@@ -92,7 +92,7 @@ queryEl.addEventListener("click", (e)=>{
                 contDrink.innerHTML += `
                 <a href='''' target="_blank" rel="noreferrer noopener" >
                 <div class='drink'>
-                <div class='drink-name title'>${item.strDrink}</div>
+                <div class='drink-name title-2 title'>${item.strDrink}</div>
                 <img src=${item.strDrinkThumb} alt=""/>
                 </div></a>
                 `

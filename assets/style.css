@@ -179,6 +179,7 @@ img {
 .title-2 {
   font-weight: bolder;
   font-style: italic;
+  background: none !important;
 }
 .title {
   font-weight: bolder;
