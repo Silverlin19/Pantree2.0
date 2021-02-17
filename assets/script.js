@@ -113,13 +113,13 @@ formEl.addEventListener("submit", (e)=>{
     const APP_KEY = "82163b1aa0397f62b7d3cbcd21c9579b"
 
     e.preventDefault()
-    let query = ("chicken")
+    let query = ("chicken apple spinach")
     const app_url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
     contRecipe.innerHTML = ''
 
 
     //Calls to api 
-    $.ajax({
+    $.ajax({ 
         type:"GET",
         url: app_url,
         //if successful it returns a new div of the recipe
